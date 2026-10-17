@@ -113,7 +113,7 @@ public class Tablero {
             }
         }
 
-        // 3. Verificar Diagonal (de arriba-izquierda a abajo-derecha)
+        // 3. Verificar Diagonal (de arriba-izquierda abajo-derecha)
         for (int fila = 0; fila < FILAS - 3; fila++) {
             for (int col = 0; col < COLUMNAS - 3; col++) {
                 if (celdas[fila][col] == ficha && celdas[fila + 1][col + 1] == ficha &&
