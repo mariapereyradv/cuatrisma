@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Fondo y superficies -->
+    <color name="fondo_principal">#1A1F2E</color>
+    <color name="fondo_secundario">#2A3142</color>
+
+    <!-- Fichas de juego -->
+    <color name="ficha_roja">#FF5252</color>
+    <color name="ficha_amarilla">#FFD740</color>
+
+    <!-- Textos -->
+    <color name="texto_principal">#F5F5F7</color>
+    <color name="texto_secundario">#B0B3B8</color>
+
+    <!-- Acentos y botones -->
+    <color name="acento_dorado">#D4AF37</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="negro">#000000</color>
 </resources>
