@@ -1,19 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 1. CABECERA: Título y Marcador -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:fontFamily="@font/playfair_display"
+            android:textColor="@color/acento_dorado"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_turno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turno_rojo"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/texto_principal"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_puntuacion_rojo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/puntuacion_rojo"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/ficha_roja"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="24dp" />
+
+            <TextView
+                android:id="@+id/tv_puntuacion_amarillo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/puntuacion_amarillo"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/ficha_amarilla"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 2. CUERPO: Contenedor del Tablero -->
+    <FrameLayout
+        android:id="@+id/contenedor_tablero"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/fondo_secundario"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_tablero_temporal"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <!-- 3. PIE: Botones de Acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_nueva_partida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="@string/btn_nueva_partida"
+            android:fontFamily="@font/inter"
+            android:textSize="14sp"
+            android:backgroundTint="@color/acento_dorado"
+            android:textColor="@color/fondo_principal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reiniciar_marcador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/btn_reiniciar_marcador"
+            android:fontFamily="@font/inter"
+            android:textSize="14sp"
+            app:backgroundTint="@color/fondo_secundario"
+            android:textColor="@color/texto_principal"
+            app:strokeColor="@color/texto_secundario"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+</LinearLayout>

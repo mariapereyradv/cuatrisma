@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cuatrisma</string>
+    <string name="titulo">CUATRISMA</string>
+    <string name="turno_rojo">Turno: Jugador Rojo</string>
+    <string name="turno_amarillo">Turno: Jugador Amarillo</string>
+    <string name="puntuacion_rojo">Rojo: 0</string>
+    <string name="puntuacion_amarillo">Amarillo: 0</string>
+    <string name="btn_nueva_partida">Nueva Partida</string>
+    <string name="btn_reiniciar_marcador">Reiniciar Marcador</string>
+    <string name="texto_tablero_temporal">El tablero 7x6 se generará aquí con Java</string>
 </resources>
